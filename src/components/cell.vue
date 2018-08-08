@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: 'cell',
-  data () {
-    return {
-      msg: '多页面测试1'
+    name: 'cell',
+    data () {
+        return {
+            msg: '多页面测试1'
+        }
     }
-  }
 }
 </script>
 

@@ -22,13 +22,6 @@
 </script>
 
 <style>
-    .el-cont{
-        width: 500px;
-        text-align: center;
-        margin: auto;
-        border: 5px solid #eee;
-        padding: 10px;
-    }
     .transition-box {
         margin-bottom: 10px;
         width: 200px;

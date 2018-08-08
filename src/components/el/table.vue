@@ -29,7 +29,7 @@
             }
         },
         data() {
-            return postData
+            return postData;
         },
         mounted:function(){
             //this.$options.methods.query(this);

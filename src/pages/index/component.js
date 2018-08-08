@@ -31,7 +31,7 @@ Vue.component("el-table-page",{
             totalRecord:0,
             pageNo:1,
             pageSize:10
-        }
+        };
     },
     methods:{
         handleSizeChange:function(size){
@@ -42,11 +42,10 @@ Vue.component("el-table-page",{
             this.pageNo=index;
             this.fetch(index,this.pageSize);
         },fetch:function(index,size){
-            var send=this.params||{};
+            var vm = this,
+                send=vm.params||{};
             send.pageNo=index||1;
             send.pageSize=size||10;
-            var vm =this;
-
             this.$utils.ajax(this,this.url,send,"post",function(res){
                 vm.totalRecord=res.data.pageBean.totalRecord;
                 vm.listResult=res.data.listResult;
