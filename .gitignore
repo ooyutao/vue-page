@@ -2,6 +2,6 @@
 *.iml
 *.tar.gz
 /node_modules
-/dist
+#/dist
 logs/
 npm-debug.log
