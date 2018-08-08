@@ -16,7 +16,7 @@ export default {
   },
     created:function(){
 
-        this.$utils.ajax(this,"/api/dmp/user/checkUser","get",function(res){
+        this.$utils.ajax(this,"/api/dmp/user/checkUser",{},"get",function(res){
             console.log(res);
         });
 

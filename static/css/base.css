@@ -13,3 +13,185 @@ body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
     border: 0;
     /*vertical-align: baseline;*/
 }
+li{
+    list-style-type:none;
+}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+body {
+    color: #666;
+    background: #fff;
+    font-family:"微软雅黑", "Microsoft YaHei", "simsun", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    min-width: 1200px;
+}
+img {
+    border: 0;
+    vertical-align: bottom
+}
+::-webkit-input-placeholder {
+    color: #999
+}
+:-moz-placeholder {
+    color: #999
+}
+::-moz-placeholder {
+    color: #999
+}
+:-ms-input-placeholder {
+    color: #ccc
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+textarea {
+    overflow: auto
+}
+input:focus, textarea:focus, button:focus, select:focus {
+    outline: 0
+}
+input::-ms-clear {
+    display: none
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+[hidden], template {
+    display: none
+}
+a {
+    background: transparent
+}
+a:active, a:hover {
+    outline: 0
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.close {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 24px
+}
+.close:before {
+    content: "\00d7"
+}
+.dialog-mask{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background:#000;
+    z-index:9999;
+    filter:alpha(opacity=50);
+    opacity:.5;
+    display:block;
+    overflow-x:hidden;
+    overflow-y:auto
+}
+.dialog {
+    position: fixed;
+    left:50%;
+    top:50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    width: 600px;
+    background-color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    display: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.dialog .dialog-foot {
+    padding: 10px 20px 40px;
+}
+.dialog .dialog-head {
+    border-bottom: solid 1px #ddd;
+    padding: 12px 20px;
+    /*background-color: #f5f5f5;*/
+    /*border-radius: 4px 4px 0 0*/
+}
+.dialog .dialog-head strong {
+    font-size: 16px;
+    color: #333;
+}
+.dialog .dialog-head .close {
+    float: right;
+    line-height: 24px;
+    margin-top: -3px;
+    color:#a5a5a5;
+}
+.dialog .dialog-body {
+    padding: 15px 20px;
+    overflow:auto;
+
+}
+.dialog .dialog-foot {
+    text-align: center;
+    /*border-top: solid 1px #ddd*/
+}
+.dialog.open {
+    display: block
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ecedf4;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+.table th {
+    vertical-align: bottom;
+    padding: 8px;
+    text-align: left;
+    background: #fafbfd;
+}
+.table td {
+    border-top: 1px solid #ecedf4;
+    padding: 8px;
+    vertical-align: top
+}
+.table a{
+    color: #0ae;
+}
+/*把td奇数行变色改成偶数行变色*/
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>thead>tr:nth-child(odd)>th {
+    background-color: #fafbfd
+}
+.table-bordered th, .table-bordered td {
+    border: solid 1px #ddd
+}
+.table-bordered th {
+    border-bottom: 2px solid #ddd
+}
+.table-hover>tbody>tr:hover>td{
+    background-color: #f5f5f5;
+}
+.table-condensed th, .table-condensed td {
+    padding: 5px
+}

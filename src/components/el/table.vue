@@ -1,35 +1,38 @@
 <template>
-    <el-table
-            :data="listResult"
-            style="width: 100%">
-        <el-table-column
-                prop="groupName"
-                label="名称"
-                width="180">
+    <div>
+    <el-form :inline="true" :params="params" class="demo-form-inline">
+        <el-form-item label="名称">
+            <el-input v-model="params.groupName" placeholder="请输入名称"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="onSubmit">查询</el-button>
+        </el-form-item>
+    </el-form>
+
+    <el-table-page  ref="page" :params="params" url="/api/manage/group/getCustomerGroupList">
+        <el-table-column prop="groupName" label="名称" width="180">
         </el-table-column>
-        <el-table-column
-                prop="groupTypeDesc"
-                label="类型"
-                width="180">
+        <el-table-column prop="groupTypeDesc" label="类型">
         </el-table-column>
-        <el-table-column
-                prop="updateUser"
-                label="用户">
+        <el-table-column prop="updateUser" label="用户">
         </el-table-column>
-    </el-table>
+    </el-table-page>
+    </div>
 </template>
 
 <script>
-    var getData = {listResult:[]};
+    var postData = {params:{}};
     export default {
-        created:function(){
-            this.$utils.alert(this,"提示信息","success");
-            this.$utils.ajax(this,"/api/manage/group/getCustomerGroupList","post",function(res){
-                getData = res.data;
-            });
+        methods: {
+            onSubmit() {
+                this.$refs.page.fetch();
+            }
         },
         data() {
-            return getData;
+            return postData
+        },
+        mounted:function(){
+            //this.$options.methods.query(this);
         }
     }
 </script>

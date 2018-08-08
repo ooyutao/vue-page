@@ -13,8 +13,21 @@ utils.alert = function(_this,text,type){
     }
     _this.$message(obj);
 };
+utils.Alert = function(_this,text,type,duration){
+    var obj = {
+        title: '提示',
+        message: text
+    };
+    if(type){
+        obj.type = type;
+    }
+    if(duration){
+        obj.duration = duration;
+    }
+    _this.$notify(obj);
+};
 utils.ajax = function(_this,url,data,type,callback,asyncType){
-    var isType = "get",async = true;
+    var isType = "post",async = true;
     if (typeof type == "function") {
         callback = type;
     }else{
