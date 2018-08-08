@@ -1,0 +1,8 @@
+{
+    "api":{
+        "comment":"稻田接口地址",
+        "domain":"http://dmps.jd.com",
+        "test":"http://dev.dmp.jd.com",
+        "dev":"http://dev.dmp.jd.com"
+    }
+}

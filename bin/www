@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var app = require('../app/app');
+
+var cluster = require('cluster');
+if (cluster.isMaster) {
+    var cpus = require('os').cpus().length;
+    for (var i = 0; i<cpus; i++) {
+        cluster.fork();
+    }
+    cluster.on('online', function (worker) {
+        console.log('worker ' + worker.process.pid);
+    });
+} else {
+    app.set('port', process.env.APP_PORT || 3000);
+    app.HttpServer.listen(app.get('port'));
+}
