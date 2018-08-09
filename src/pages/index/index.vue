@@ -3,11 +3,9 @@
     <img src="/static/img/i.jpg" width="200">
     <h4 @click="open">一个提示</h4>
     <ul class="nav">
-      <li><a href="/#/">首页</a></li>
+      <li><a href="#/">首页</a></li>
+      <li><a href="#/table">table</a></li>
       <li><a href="cell.html">独立单页面</a></li>
-      <li><a href="/#/fade">fade</a></li>
-      <li><a href="/#/zoom">zoom</a></li>
-      <li><a href="/#/table">table</a></li>
     </ul>
     <router-view></router-view>
   </div>
@@ -40,7 +38,7 @@ export default {
   }
 .nav li{
   float:left;
-  padding: 5px 20px;
+
   border-right: 1px solid #eee;
   height: 50px;
   line-height: 40px;
@@ -49,5 +47,7 @@ export default {
   font-size: 14px;
   color: #333;
   text-decoration: none;
+  padding: 5px 20px;
+  display: block;
 }
 </style>

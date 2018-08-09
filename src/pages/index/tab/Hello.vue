@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import zoom from '@/components/el/zoom';
 export default {
   name: 'hello',
   data () {

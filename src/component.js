@@ -42,7 +42,7 @@ Vue.component("el-table-page",{
             this.pageNo=index;
             this.fetch(index,this.pageSize);
         },fetch:function(index,size){
-            var vm = this,
+            let vm = this,
                 send=vm.params||{};
             send.pageNo=index||1;
             send.pageSize=size||10;
@@ -65,4 +65,4 @@ Vue.component("el-table-page",{
             //     })
         }
     }
-})
+});
