@@ -12,7 +12,7 @@
 </template>
 
 <script>
-//import open from '@/components/el/alert';
+//import zoom from '@/components/el/zoom';
 export default {
   name: 'app',
   methods: {
